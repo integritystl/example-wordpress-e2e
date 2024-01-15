@@ -1,0 +1,23 @@
+{
+  "name": "example-wordpress-e2e",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "./scripts/start.sh",
+    "ci": "./scripts/githubActionsStart.sh",
+    "e2e-tests": "npx cypress run --headless --reporter mochawesome --reporter-options \"reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss\"",
+    "e2e-tests-open": "npx cypress open"
+  },
+  "engines": {
+    "node": "^18.x",
+    "npm": "please-use-yarn",
+    "yarn": "^1.22.x"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
